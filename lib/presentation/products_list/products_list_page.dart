@@ -35,7 +35,7 @@ class ProductsListPage extends HookConsumerWidget {
         return InkWell(
           onTap: () {
             String id = productList.products[index].id.toString();
-            ref.read(selectedProductNotifier.notifier).setSelectedId(id);
+            ref.read(selectedProductNotifier.notifier).state = id;
             Navigator.pushNamed(context, '/to_product');
           },
           child: Text(products[index].description));

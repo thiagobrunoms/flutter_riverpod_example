@@ -11,6 +11,6 @@ class ProductNotifier extends _$ProductNotifier {
   Future<Product> build() async {
     final selectedId = ref.watch(selectedProductNotifier);
     final requestProduct = ref.read(loadProductProvider);
-    return requestProduct(selectedId);
+    return requestProduct(selectedId!);
   }
 }
